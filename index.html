@@ -1,19 +1,194 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ditiro Rampate | Portfolio</title>
+  <meta name="description" content="Botswana-based Python developer building offline-first computer vision and edge AI for African health." />
+  <style>
+    :root {
+      --bg: #f7f9fc;
+      --surface: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --line: #e2e8f0;
+      --accent: #2563eb;
+      --accent-2: #14b8a6;
+      --max: 980px;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+    .nav {
+      position: sticky; top: 0; backdrop-filter: blur(8px);
+      background: rgba(255, 255, 255, 0.9); border-bottom: 1px solid var(--line); z-index: 20;
+    }
+    .nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; }
+    .brand { font-weight: 700; letter-spacing: .2px; }
+    .nav-links { display: flex; gap: 18px; font-size: 14px; }
 
-<div class="container">
-  {% include profile.html %}
+    .hero { padding: 56px 0 28px; }
+    .hero-row { display: grid; grid-template-columns: 130px 1fr; gap: 20px; align-items: center; }
+    .portrait { width: 120px; height: 120px; border-radius: 14px; object-fit: cover; border: 1px solid var(--line); }
+    .hero h1 { font-size: clamp(30px, 5vw, 48px); line-height: 1.1; margin: 0 0 12px; letter-spacing: -0.02em; }
+    .hero p { margin: 0; color: var(--muted); max-width: 780px; font-size: 18px; }
+    .chips { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 10px; }
+    .chip {
+      border: 1px solid var(--line); background: var(--surface); color: #334155;
+      padding: 7px 12px; border-radius: 999px; font-size: 13px;
+    }
+    .cta { display: flex; gap: 12px; margin-top: 18px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 10px 14px; border-radius: 10px; border: 1px solid var(--line);
+      font-weight: 600; font-size: 14px; text-decoration: none;
+    }
+    .btn.primary { background: #2563eb; color: #fff; border-color: #2563eb; }
+    .btn.secondary { background: #fff; color: #0f172a; }
 
-  {% include projects.html %}
+    section { padding: 22px 0; }
+    .section-title {
+      font-size: 13px; text-transform: uppercase; letter-spacing: .12em;
+      color: var(--muted); margin-bottom: 14px;
+    }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .card {
+      border: 1px solid var(--line); background: var(--surface);
+      border-radius: 14px; padding: 16px;
+    }
+    .card h3 { margin: 0 0 8px; font-size: 18px; }
+    .card p { margin: 0; color: var(--muted); font-size: 15px; }
 
-  {% include community.html %}
+    .timeline { display: grid; gap: 10px; }
+    .item { border: 1px solid var(--line); background: var(--surface); border-radius: 12px; padding: 14px; }
+    .item strong { display: block; }
+    .item .meta { color: var(--muted); font-size: 14px; }
 
-  {% include talks.html %}
+    footer {
+      border-top: 1px solid var(--line); margin-top: 30px;
+      padding: 20px 0 34px; color: var(--muted); font-size: 14px;
+    }
+    @media (max-width: 760px) {
+      .grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .hero { padding-top: 42px; }
+      .hero-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <div class="brand">Ditiro Rampate</div>
+      <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#community">Community</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-  {% include experience.html %}
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero-row">
+        <img class="portrait" src="/assets/img/portrait.jpg" alt="Ditiro Rampate portrait" />
+        <div>
+          <h1>Offline-first Computer Vision & Edge AI for African health.</h1>
+          <p>
+            Botswana-based Python developer building practical solutions for low-resource healthcare environments.
+            Lead Organizer of Deep Learning IndabaX Botswana, speaker, and community builder across African AI ecosystems.
+          </p>
+        </div>
+      </div>
 
-  {% include education.html %}
+      <div class="chips">
+        <span class="chip">Python</span>
+        <span class="chip">Computer Vision</span>
+        <span class="chip">Edge AI</span>
+        <span class="chip">Data Science</span>
+        <span class="chip">Remote Sensing</span>
+      </div>
 
-  {% include contact.html %}
-</div>
+      <div class="cta">
+        <a class="btn primary" href="mailto:ditirorampate@gmail.com">Email Me</a>
+        <a class="btn secondary" href="https://www.linkedin.com/in/ditiro-rampate-46a999a4" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="btn secondary" href="https://github.com/ditirodt" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="btn secondary" href="https://calendar.app.google/uZ2AmsEzPewFbqJE7" target="_blank" rel="noreferrer">Book a Chat</a>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="section-title">Featured Work</div>
+      <div class="grid">
+        <article class="card">
+          <h3>introspect (Offline-first malaria detection)</h3>
+          <p>Smartphone microscopy workflow for malaria screening in low-resource clinics, designed for limited connectivity and constrained infrastructure.</p>
+        </article>
+        <article class="card">
+          <h3>Insurance performance dashboard</h3>
+          <p>Built and maintained a Shiny for Python dashboard replacing manual Excel reporting for insurance agent persistency tracking.</p>
+        </article>
+        <article class="card">
+          <h3>PDF extraction automation</h3>
+          <p>Implemented OCR pipeline with py-tesseract to automate a time-consuming, error-prone data extraction process.</p>
+        </article>
+        <article class="card">
+          <h3>NDVI temporal analysis workshops</h3>
+          <p>Delivered geospatial Python workshops at PyCon events using geemap and satellite data time-series analysis.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="community">
+      <div class="section-title">Impact & Community</div>
+      <div class="timeline">
+        <div class="item"><strong>Lead Organizer — Deep Learning IndabaX Botswana</strong><div class="meta">Resurrected and led 2024 event programming, operations, and community engagement.</div></div>
+        <div class="item"><strong>Co-organizer — Deep Learning IndabaX South Africa</strong><div class="meta">Part of fundraising team that contributed to raising R1.2 million.</div></div>
+        <div class="item"><strong>OmdenaAI Botswana Chapter Co-Lead</strong><div class="meta">Led project proposals and beginner-friendly data science workshops.</div></div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="section-title">Experience</div>
+      <div class="timeline">
+        <div class="item">
+          <strong>Data Trainee — Software Applications and Information Solutions (SAiS)</strong>
+          <div class="meta">Oct 2023 – Oct 2024 · Gaborone, Botswana</div>
+        </div>
+        <div class="item">
+          <strong>Machine Learning Engineer / Chapter Co-Lead — Omdena</strong>
+          <div class="meta">Mar 2021 – Present · Remote Botswana</div>
+        </div>
+        <div class="item">
+          <strong>ICT Intern — National Assembly</strong>
+          <div class="meta">Dec 2020 – Jun 2021 · Gaborone, Botswana</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-title">Contact</div>
+      <div class="card">
+        <h3>Let’s collaborate</h3>
+        <p>
+          Open to collaborations in health AI, computer vision, edge deployment, and African AI community initiatives.<br />
+          Email: <a href="mailto:ditirorampate@gmail.com">ditirorampate@gmail.com</a>
+        </p>
+      </div>
+    </section>
+
+    <footer>© <span id="year"></span> Ditiro Rampate</footer>
+  </main>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
