@@ -1,0 +1,17 @@
+<section class="section">
+  <h2>Impact & Community</h2>
+
+  {% for c in site.data.community %}
+    <div class="card">
+      <h3>{{ c.role }} — {{ c.org }}</h3>
+
+      {% if c.impact %}
+        <ul>
+          {% for i in c.impact %}
+            <li>{{ i }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  {% endfor %}
+</section>

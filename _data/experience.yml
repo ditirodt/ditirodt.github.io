@@ -1,24 +1,17 @@
-- role: Junior Machine Learning Engineer
-  company: Omdena
-  dates: 2021
-  logo: fellowship.svg
+- role: "Trainee Python Developer (BI & Data Analytics)"
+  company: "SAiS (Insuretech — client: Botswana Life)"
+  period: "2024 – Present"
+  achievements:
+    - "Built automation workflows using Microsoft Graph API (file pipelines and OneDrive integration)"
+    - "Developed dashboards that replaced manual Excel reporting for agent performance tracking"
+    - "Worked on ERP development using the Frappe framework"
+  stack: ["Python", "Microsoft Graph API", "Data Analytics", "Frappe"]
 
-- role: Information Technology Intern
-  company: National Assembly
-  dates: Dec 2020 - Jun 2021
-  logo: fellowship.svg
-
-- role: Scratch Trainer (Africa Code Week - SAP/UNESCO)
-  company: Debswana Diamond Company
-  dates: Sep 2019 - Oct 2019
-  logo: africacodeweek.jpg
-
-- role: Assistant Security Technician
-  company: Technozilla
-  dates: Oct 2018 - Jun 2019
-  logo: fellowship.svg
-
-- role: Workshop Assistant (Industrial Attachment)
-  company: Modi Investments
-  dates: Jan 2017 - Jun 2017
-  logo: fellowship.svg
+- role: "Community builder & organizer"
+  company: "Deep Learning IndabaX / OmdenaAI / SisonkeBiotik"
+  period: "2023 – Present"
+  achievements:
+    - "Lead Organizer for Deep Learning IndabaX Botswana and co-organizer for IndabaX South Africa"
+    - "Lead open-source AI projects with OmdenaAI Botswana"
+    - "Organize health-focused DS/ML workshops (Data Science for Health in Africa series)"
+  stack: ["Program design", "Volunteer coordination", "Partnerships", "Public speaking"]

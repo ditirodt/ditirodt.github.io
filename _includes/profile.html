@@ -1,7 +1,33 @@
-<div class="profile">
-    <div class="profile-picture">
-        <img alt="Ditiro Rampate profile photo" src="./assets/img/logo.jpeg">
+<section class="section hero">
+  <div class="hero-card">
+    <div class="hero-left">
+      <img src="{{ site.picture }}" alt="{{ site.name }}" class="profile-pic"/>
     </div>
-    <h1>{{ site.title }}</h1>
-    <p>Computer Systems Engineer | Software, Data & ML Projects</p>
-</div>
+
+    <div class="hero-right">
+      <h1 class="hero-title">{{ site.name }}</h1>
+      <p class="hero-tagline">
+        Offline-first Computer Vision & Edge AI builder for African health • Python developer • Community organizer
+      </p>
+
+      <p class="hero-bio">
+        I’m a Botswana-based Python developer and AI community builder focused on deploying practical vision systems in low-resource settings.
+        I’m building <strong>introspect</strong> — an offline-first malaria diagnostic workflow using smartphone microscopy (3D-printed stand + deployment-aware models).
+        I also organize AI ecosystems through <strong>Deep Learning IndabaX Botswana</strong>, and help grow health-focused ML communities across Africa.
+      </p>
+
+      <ul class="hero-proof">
+        <li><strong>Health + Edge AI:</strong> malaria screening MVP designed for limited connectivity, few specialists, and constrained lab infrastructure</li>
+        <li><strong>Deployment mindset:</strong> efficiency-aware CV (TensorFlow Lite / edge constraints), offline sync patterns</li>
+        <li><strong>Community leadership:</strong> Lead Organizer (IndabaX Botswana), OmdenaAI Botswana chapter lead, SisonkeBiotik leadership</li>
+      </ul>
+
+      <div class="hero-cta">
+        <a class="btn" href="mailto:{{ site.email }}">Email</a>
+        <a class="btn" href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="{{ site.github }}" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="{{ site.calendar }}" target="_blank" rel="noopener">Schedule a chat</a>
+      </div>
+    </div>
+  </div>
+</section>

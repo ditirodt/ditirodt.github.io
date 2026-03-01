@@ -1,14 +1,15 @@
 title: "Ditiro Rampate"
+name: "Ditiro Rampate"
 email: "ditirorampate@gmail.com"
-description: >-
-  Computer Systems Engineer building practical software, data, and machine learning solutions.
-baseurl: "/"
+description: "Botswana-based Python developer building offline-first computer vision and edge AI for African health. Lead Organizer of Deep Learning IndabaX Botswana; speaker and community builder across African AI ecosystems."
+
 url: "https://ditirodt.github.io"
-twitter_username: "ditiro_dt"
-github_username: "ditirodt"
-linkedin_username: "ditiro-rampate"
+baseurl: ""
 
-sass:
-  sass_dir: _sass
+picture: "/logo.png"
 
-icon: ./assets/img/icon.jpg
+# Social links (update)
+github: "https://github.com/ditirodt"
+linkedin: "https://www.linkedin.com/in/ditiro-rampate/"
+calendar: "https://calendly.com/ditirorampate"
+website: "https://www.introspect-health.com"

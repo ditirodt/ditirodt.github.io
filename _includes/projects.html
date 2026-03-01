@@ -1,19 +1,47 @@
-<h2>Projects</h2>
-<div class="card-container">
-    {% for item in site.data.projects %}
-    {% if item.page-name %}
-    <a href="{{ site.url }}/projects/{{ item.page-name }}">
-    {% else %}
-    <a>
-    {% endif %}
-      <div class="card">
-        <div class="info">
-          <p class="title">{{ item.title }}</p>
-          <p class="location">{{ item.event }}</p>
-          <p class="dates">{{ item.date }}</p>
-        </div>
-      </div>
-    </a>
-    {% endfor %}
-  </div>
-  
+<section class="section">
+  <h2>Featured Work</h2>
+
+  {% assign featured = site.data.projects | where: "featured", true %}
+  {% for p in featured %}
+    <div class="card">
+      <h3>{{ p.title }}</h3>
+      <p>{{ p.description }}</p>
+
+      {% if p.highlights %}
+        <ul>
+          {% for h in p.highlights %}
+            <li>{{ h }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+      {% if p.stack %}
+        <p><strong>Stack:</strong> {{ p.stack | join: ", " }}</p>
+      {% endif %}
+
+      {% if p.links %}
+        <p>
+          {% for l in p.links %}
+            <a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a>{% unless forloop.last %} · {% endunless %}
+          {% endfor %}
+        </p>
+      {% endif %}
+    </div>
+  {% endfor %}
+
+  <h2>More Projects</h2>
+  {% assign others = site.data.projects | where: "featured", false %}
+  {% for p in others %}
+    <div class="card">
+      <h3>{{ p.title }}</h3>
+      <p>{{ p.description }}</p>
+      {% if p.links %}
+        <p>
+          {% for l in p.links %}
+            <a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a>{% unless forloop.last %} · {% endunless %}
+          {% endfor %}
+        </p>
+      {% endif %}
+    </div>
+  {% endfor %}
+</section>

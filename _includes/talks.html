@@ -1,0 +1,22 @@
+<section class="section">
+  <h2>Talks & Workshops</h2>
+
+  {% for t in site.data.talks %}
+    <div class="card">
+      <h3>{{ t.title }}</h3>
+      <p><strong>{{ t.event }}</strong> · {{ t.year }}</p>
+
+      {% if t.topics %}
+        <p><strong>Topics:</strong> {{ t.topics | join: ", " }}</p>
+      {% endif %}
+
+      {% if t.links %}
+        <p>
+          {% for l in t.links %}
+            <a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a>{% unless forloop.last %} · {% endunless %}
+          {% endfor %}
+        </p>
+      {% endif %}
+    </div>
+  {% endfor %}
+</section>

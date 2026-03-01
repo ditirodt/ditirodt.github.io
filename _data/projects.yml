@@ -1,20 +1,49 @@
-- title: Weather API App
-  event: Java
-  date: Built a REST API weather data application
+- title: "introspect (offline-first malaria detection)"
+  featured: true
+  description: "Offline-first smartphone microscopy workflow for malaria screening in low-resource clinics. Built for limited connectivity, specialist shortages, and constrained lab infrastructure."
+  highlights:
+    - "Two deployment modes: smartphone adapter for existing microscopes + low-cost digital microscope pathway"
+    - "Deployment-aware approach (edge constraints), with offline sync in mind"
+    - "Early-stage MVP; iterating from 0→1 with partners and real-world constraints"
+  stack: ["Python", "Computer Vision", "Edge AI", "TensorFlow Lite (planned)", "Offline-first workflows"]
+  links:
+    - label: "Website"
+      url: "https://www.introspect-health.com"
 
-- title: Car Accident Data Scraper
-  event: Python
-  date: Automated web scraping and data cleaning pipeline
+- title: "NDVI temporal analysis (remote sensing + deep learning)"
+  featured: true
+  description: "Time series vegetation monitoring using satellite imagery and Python, delivered as workshops/talks at PyCon events."
+  highlights:
+    - "NDVI pipelines with geemap + Google Earth Engine"
+    - "Hands-on workshop format for intermediate Python audiences"
+  stack: ["Python", "geemap", "Google Earth Engine", "pandas", "matplotlib"]
+  links:
+    - label: "GitHub"
+      url: "https://github.com/ditirodt"
 
-- title: Grader System
-  event: Java
-  date: Data structures-based grading utility
+- title: "Insurance agent performance dashboard (replaced Excel reporting)"
+  featured: true
+  description: "Built a Python dashboard to track insurance agent performance, replacing manual Excel workflows and improving operational visibility."
+  highlights:
+    - "Operational analytics and reporting automation"
+    - "Built for BI & Data Analytics context in insuretech"
+  stack: ["Python", "Data Analytics", "Dashboards"]
+  links:
+    - label: "GitHub"
+      url: "https://github.com/ditirodt"
 
-- title: Spam Detection Model
-  event: Python
-  date: Machine learning classification for spam filtering
+- title: "Microsoft Graph automation (OneDrive workflows)"
+  featured: false
+  description: "Automations to zip folders, handle exceptions, and integrate file workflows into OneDrive using Microsoft Graph API."
+  stack: ["Python", "Microsoft Graph API", "Automation"]
+  links:
+    - label: "GitHub"
+      url: "https://github.com/ditirodt"
 
-- title: Registration & Login System
-  event: PHP, HTML, CSS
-  date: Secure user authentication workflow
-  page-name: sprint1
+- title: "OmdenaAI volunteer projects (environment + agriculture)"
+  featured: false
+  description: "Volunteer ML projects including plant health prediction and desertification detection using satellite data."
+  stack: ["Python", "Deep Learning", "Remote Sensing"]
+  links:
+    - label: "GitHub"
+      url: "https://github.com/ditirodt"

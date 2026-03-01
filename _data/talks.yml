@@ -1,0 +1,14 @@
+- title: "Data in the Wild: NDVI Temporal Analysis with Satellite Data"
+  event: "PyCon Namibia"
+  year: 2024
+  topics: ["Remote sensing", "geemap", "Time series", "Python"]
+
+- title: "Environmental data analysis with Python (pandas, matplotlib, geemap)"
+  event: "Workshops / community sessions"
+  year: 2025
+  topics: ["Python", "Data analysis", "Remote sensing"]
+
+- title: "Open source, AI & community leadership (talks and panels)"
+  event: "PyCon Africa + community conferences"
+  year: 2025
+  topics: ["Open source", "Community building", "AI in Africa"]

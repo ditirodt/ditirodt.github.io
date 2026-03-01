@@ -1,0 +1,20 @@
+- role: "Lead Organizer"
+  org: "Deep Learning IndabaX Botswana"
+  impact:
+    - "Organize an annual AI convening platform in Botswana (talks, workshops, showcases)"
+    - "Lead volunteer coordination, sponsorship outreach, speaker logistics, and program design"
+
+- role: "Co-organizer"
+  org: "Deep Learning IndabaX South Africa"
+  impact:
+    - "Support broader IndabaX movement operations and program coordination"
+
+- role: "Chapter Lead"
+  org: "OmdenaAI Botswana"
+  impact:
+    - "Lead open-source AI projects and local community engagement"
+
+- role: "Leadership Committee"
+  org: "SisonkeBiotik"
+  impact:
+    - "Help organize Data Science for Health in Africa workshop series at Deep Learning Indaba"

@@ -1,16 +1,13 @@
-<h2>Education</h2>
-<div class="card-container">
-    {% for item in site.data.education %}
+<section class="section">
+  <h2>Education & Programs</h2>
+
+  {% for ed in site.data.education %}
     <div class="card">
-      <div class="icon">
-        <img alt src="./assets/img/education/{{ item.logo }}">
-      </div>
-      <div class="info">
-        <p class="title">{{ item.course }}</p>
-        <p class="location">{{ item.institute }}</p>
-        <p class="dates">{{ item.dates }}</p>
-      </div>
+      <h3>{{ ed.name }}</h3>
+      <p><strong>{{ ed.institution }}</strong> · {{ ed.period }}</p>
+      {% if ed.notes %}
+        <p>{{ ed.notes }}</p>
+      {% endif %}
     </div>
-    {% endfor %}
-</div>
-  
+  {% endfor %}
+</section>

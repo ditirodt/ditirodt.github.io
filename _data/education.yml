@@ -1,16 +1,14 @@
-- course: BSc Computer Systems Engineering
-  institute: University of Sunderland
-  dates: 2014 - 2018
-  logo: 199px-University_of_Sunderland_logo.svg.png
-  
-- course: Fundamentals of TinyML
-  institute: Edx
-  dates: June 2021- to date
-  logo: download.png
+- name: "BEng (Hons) / Honours Degree — Computer Systems Engineering"
+  institution: "University of Sunderland (or your awarding institution)"
+  period: "Completed"
+  notes: "Focus on software engineering, AI, and data-driven systems."
 
- 
-- course: Data-Driven decision making using SQL
-  institute: Datacamp
-  dates: 2019
-  logo: datacamp.png
- 
+- name: "TinyML & Edge AI learning (self-paced + applied projects)"
+  institution: "Ongoing"
+  period: "2021 – Present"
+  notes: "Applied learning through real projects in health, remote sensing, and edge deployment constraints."
+
+- name: "Accelerators / programs"
+  institution: "MIT Early-Stage Program + Orange Digital Center Summer Challenge (Top 3)"
+  period: "2024 – 2025"
+  notes: "Early-stage venture building and product iteration for introspect."
