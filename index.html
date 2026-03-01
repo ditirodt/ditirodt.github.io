@@ -1,23 +1,240 @@
----
----
 <!DOCTYPE html>
 <html lang="en">
-{% include header.html %}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ditiro Rampate | Portfolio</title>
+  <meta name="description" content="Computer Systems Engineer building practical software, data, and machine learning solutions." />
+  <style>
+    :root {
+      --bg: #0b0d10;
+      --surface: #12161b;
+      --text: #e8edf2;
+      --muted: #9ca8b5;
+      --line: #232a33;
+      --accent: #7cc4ff;
+      --accent-2: #a7f3d0;
+      --max: 980px;
+    }
 
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(8px);
+      background: rgba(11, 13, 16, 0.75);
+      border-bottom: 1px solid var(--line);
+      z-index: 20;
+    }
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+    }
+    .brand { font-weight: 700; letter-spacing: .2px; }
+    .nav-links { display: flex; gap: 18px; font-size: 14px; }
+
+    .hero { padding: 76px 0 48px; }
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 52px);
+      line-height: 1.1;
+      margin: 0 0 14px;
+      letter-spacing: -0.02em;
+    }
+    .hero p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 720px;
+      font-size: 18px;
+    }
+    .chips {
+      margin-top: 22px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .chip {
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: #d5dde6;
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+    }
+
+    .cta { display: flex; gap: 12px; margin-top: 26px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 14px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+    }
+    .btn.primary { background: var(--text); color: #0a0a0a; border-color: var(--text); }
+    .btn.secondary { background: var(--surface); color: var(--text); }
+
+    section { padding: 26px 0; }
+    .section-title {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .card {
+      border: 1px solid var(--line);
+      background: var(--surface);
+      border-radius: 14px;
+      padding: 16px;
+    }
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+    .card p { margin: 0; color: var(--muted); font-size: 15px; }
+
+    .timeline { display: grid; gap: 10px; }
+    .item {
+      border: 1px solid var(--line);
+      background: var(--surface);
+      border-radius: 12px;
+      padding: 14px;
+    }
+    .item strong { display: block; }
+    .item .meta { color: var(--muted); font-size: 14px; }
+
+    footer {
+      border-top: 1px solid var(--line);
+      margin-top: 34px;
+      padding: 20px 0 34px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 760px) {
+      .grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .hero { padding-top: 56px; }
+    }
+  </style>
+</head>
 <body>
-    {% include navbar.html %}
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <div class="brand">Ditiro Rampate</div>
+      <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-    {% include profile.html %}
+  <main class="wrap">
+    <section class="hero">
+      <h1>Computer Systems Engineer building practical software and ML solutions.</h1>
+      <p>
+        I design and build reliable applications across backend development, data workflows, and machine learning.
+        I focus on clear problem-solving, useful products, and measurable outcomes.
+      </p>
 
-    {% include about.html %}
+      <div class="chips">
+        <span class="chip">Java</span>
+        <span class="chip">Python</span>
+        <span class="chip">Machine Learning</span>
+        <span class="chip">REST APIs</span>
+        <span class="chip">SQL</span>
+      </div>
 
-    {% include projects.html %}
+      <div class="cta">
+        <a class="btn primary" href="mailto:ditirorampate@gmail.com">Email Me</a>
+        <a class="btn secondary" href="https://github.com/ditirodt" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="btn secondary" href="https://www.linkedin.com/in/ditiro-rampate/" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+    </section>
 
-    {% include experience.html %}
+    <section id="projects">
+      <div class="section-title">Featured Projects</div>
+      <div class="grid">
+        <article class="card">
+          <h3>Weather API App</h3>
+          <p>Java-based application consuming weather data through REST APIs and presenting clean, usable outputs.</p>
+        </article>
+        <article class="card">
+          <h3>Car Accident Data Scraper</h3>
+          <p>Python scraper and cleaning pipeline to collect and structure accident datasets for analysis.</p>
+        </article>
+        <article class="card">
+          <h3>Spam Detection Model</h3>
+          <p>Classification model in Python for identifying spam messages with a practical ML workflow.</p>
+        </article>
+        <article class="card">
+          <h3>Registration & Login System</h3>
+          <p>Secure PHP authentication flow with user registration and login fundamentals.</p>
+        </article>
+      </div>
+    </section>
 
-    {% include education.html %}
+    <section id="experience">
+      <div class="section-title">Experience</div>
+      <div class="timeline">
+        <div class="item">
+          <strong>Junior Machine Learning Engineer</strong>
+          <div class="meta">Omdena · 2021</div>
+        </div>
+        <div class="item">
+          <strong>Information Technology Intern</strong>
+          <div class="meta">National Assembly · Dec 2020 – Jun 2021</div>
+        </div>
+        <div class="item">
+          <strong>Scratch Trainer (Africa Code Week - SAP/UNESCO)</strong>
+          <div class="meta">Debswana Diamond Company · Sep 2019 – Oct 2019</div>
+        </div>
+      </div>
+    </section>
 
-    {% include contact.html %}
+    <section id="contact">
+      <div class="section-title">Contact</div>
+      <div class="card">
+        <h3>Let’s work together</h3>
+        <p>
+          Open to software, data, and machine learning opportunities.<br />
+          Email: <a href="mailto:ditirorampate@gmail.com">ditirorampate@gmail.com</a>
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Ditiro Rampate
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
-
 </html>
