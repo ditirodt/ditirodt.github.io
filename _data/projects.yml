@@ -1,20 +1,20 @@
-- title: WeatherAPIApp 
-  event: Language:Java
-  date: Network Data, RESTAPI
+- title: Weather API App
+  event: Java
+  date: Built a REST API weather data application
 
-- title: ScrapeCarAccidentsData
-  event: Language:Python
-  date: Web Srapping with python
+- title: Car Accident Data Scraper
+  event: Python
+  date: Automated web scraping and data cleaning pipeline
 
-- title: Grader
-  event: Language:Java
-  date: Data Structure
+- title: Grader System
+  event: Java
+  date: Data structures-based grading utility
 
-- title: SpamDetection
-  event: Language:Python
-  date: Machine Learning(Classification)
+- title: Spam Detection Model
+  event: Python
+  date: Machine learning classification for spam filtering
 
-- title: Registration-Login-using-PHP
-  event: Language:PHP, HTML, CSS
-  date: A simple registration login using PHP
+- title: Registration & Login System
+  event: PHP, HTML, CSS
+  date: Secure user authentication workflow
   page-name: sprint1
