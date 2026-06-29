@@ -155,6 +155,30 @@
       background: rgba(214, 168, 61, 0.25);
       border-radius: 48px;
     }
+    .diamond-field {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.9;
+    }
+    .diamond {
+      position: absolute;
+      width: 92px;
+      aspect-ratio: 1;
+      transform: rotate(45deg);
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.16), rgba(214, 168, 61, 0.2));
+      box-shadow: inset 0 0 0 12px rgba(255, 255, 255, 0.04);
+    }
+    .diamond::after {
+      content: "";
+      position: absolute;
+      inset: 21%;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+    }
+    .diamond.one { right: 10%; top: 16%; width: 126px; }
+    .diamond.two { right: 28%; bottom: 14%; width: 72px; background: rgba(201, 209, 219, 0.22); }
+    .diamond.three { left: 4%; bottom: 19%; width: 54px; background: rgba(183, 119, 60, 0.2); }
     .hero-inner {
       position: relative;
       z-index: 1;
@@ -357,6 +381,28 @@
       border-radius: 8px;
       padding: 18px;
       background: rgba(255, 255, 255, 0.08);
+      position: relative;
+      overflow: hidden;
+      min-height: 150px;
+    }
+    .tier::after {
+      content: "";
+      position: absolute;
+      right: -22px;
+      bottom: -22px;
+      width: 76px;
+      aspect-ratio: 1;
+      transform: rotate(45deg);
+      border: 1px solid currentColor;
+      opacity: 0.34;
+    }
+    .tier-icon {
+      width: 42px;
+      aspect-ratio: 1;
+      margin-bottom: 20px;
+      transform: rotate(45deg);
+      border: 1px solid currentColor;
+      background: rgba(255, 255, 255, 0.08);
     }
     .tier b {
       display: block;
@@ -369,10 +415,10 @@
       color: rgba(255, 255, 255, 0.74);
       font-size: 14px;
     }
-    .tier.gold { border-color: rgba(214, 168, 61, 0.7); box-shadow: inset 0 3px 0 var(--gold); }
-    .tier.silver { border-color: rgba(201, 209, 219, 0.75); box-shadow: inset 0 3px 0 var(--silver); }
-    .tier.bronze { border-color: rgba(183, 119, 60, 0.78); box-shadow: inset 0 3px 0 var(--bronze); }
-    .tier.blue { border-color: rgba(244, 210, 122, 0.5); box-shadow: inset 0 3px 0 var(--gold-2); }
+    .tier.gold { color: var(--gold-2); border-color: rgba(214, 168, 61, 0.7); box-shadow: inset 0 3px 0 var(--gold); }
+    .tier.silver { color: var(--silver); border-color: rgba(201, 209, 219, 0.75); box-shadow: inset 0 3px 0 var(--silver); }
+    .tier.bronze { color: var(--bronze-2); border-color: rgba(183, 119, 60, 0.78); box-shadow: inset 0 3px 0 var(--bronze); }
+    .tier.blue { color: #d8e7ff; border-color: rgba(244, 210, 122, 0.5); box-shadow: inset 0 3px 0 var(--gold-2); }
 
     .sponsor {
       background: var(--ink);
@@ -451,6 +497,11 @@
   </nav>
 
   <header class="hero" id="top">
+    <div class="diamond-field" aria-hidden="true">
+      <span class="diamond one"></span>
+      <span class="diamond two"></span>
+      <span class="diamond three"></span>
+    </div>
     <div class="wrap hero-inner">
       <div>
         <span class="eyebrow">Deep Learning IndabaX Botswana</span>
@@ -656,20 +707,25 @@
             Sponsors help cover venue operations, food, participant support, hackathon prizes, branded materials, speaker logistics, and the practical details that make the event accessible.
           </p>
         </div>
+        <p class="kicker">Support tiers</p>
         <div class="tier-grid" aria-label="Sponsorship tiers">
           <div class="tier gold">
+            <div class="tier-icon" aria-hidden="true"></div>
             <b>Gold</b>
             <span>P100 000</span>
           </div>
           <div class="tier silver">
+            <div class="tier-icon" aria-hidden="true"></div>
             <b>Silver</b>
             <span>P50 000</span>
           </div>
           <div class="tier bronze">
+            <div class="tier-icon" aria-hidden="true"></div>
             <b>Bronze</b>
             <span>P25 000</span>
           </div>
           <div class="tier blue">
+            <div class="tier-icon" aria-hidden="true"></div>
             <b>Blue</b>
             <span>P15 000</span>
           </div>
