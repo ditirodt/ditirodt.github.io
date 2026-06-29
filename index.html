@@ -3,192 +3,659 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ditiro Rampate | Portfolio</title>
-  <meta name="description" content="Botswana-based Python developer building offline-first computer vision and edge AI for African health." />
+  <title>Deep Learning IndabaX Botswana 2026</title>
+  <meta
+    name="description"
+    content="Deep Learning IndabaX Botswana 2026 brings Botswana's AI community together from 29-31 July 2026 at Botswana Accountancy College under the theme Our Data. Our Intelligence. Our Future."
+  />
+  <meta name="keywords" content="IndabaX Botswana, Deep Learning Indaba, AI Botswana, machine learning, hackathon, AI Fest, poster session, Botswana Accountancy College" />
+  <meta name="theme-color" content="#113f67" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Deep Learning IndabaX Botswana 2026" />
+  <meta property="og:description" content="Our Data. Our Intelligence. Our Future. 29-31 July 2026 at Botswana Accountancy College." />
+  <meta property="og:image" content="/logo.png" />
+  <link rel="icon" href="/logo.png" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "Deep Learning IndabaX Botswana 2026",
+      "description": "A three-day AI and machine learning community event in Botswana with talks, practical sessions, a hackathon, AI Fest, and poster showcase.",
+      "startDate": "2026-07-29",
+      "endDate": "2026-07-31",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": "Botswana Accountancy College",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "BW",
+          "addressLocality": "Gaborone"
+        }
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "Deep Learning IndabaX Botswana"
+      }
+    }
+  </script>
   <style>
     :root {
-      --bg: #f7f9fc;
+      --ink: #102033;
+      --muted: #526173;
+      --paper: #fffaf1;
       --surface: #ffffff;
-      --text: #0f172a;
-      --muted: #475569;
-      --line: #e2e8f0;
-      --accent: #2563eb;
-      --accent-2: #14b8a6;
-      --max: 980px;
+      --blue: #113f67;
+      --teal: #0d9488;
+      --gold: #f2b84b;
+      --coral: #e76f51;
+      --line: rgba(16, 32, 51, 0.14);
+      --shadow: 0 18px 50px rgba(16, 32, 51, 0.12);
+      --max: 1160px;
     }
+
     * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     body {
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: var(--paper);
+      color: var(--ink);
       line-height: 1.6;
     }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .wrap { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
+
     .nav {
-      position: sticky; top: 0; backdrop-filter: blur(8px);
-      background: rgba(255, 255, 255, 0.9); border-bottom: 1px solid var(--line); z-index: 20;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 250, 241, 0.92);
+      backdrop-filter: blur(14px);
     }
-    .nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; }
-    .brand { font-weight: 700; letter-spacing: .2px; }
-    .nav-links { display: flex; gap: 18px; font-size: 14px; }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 14px 0;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+    }
+    .brand img {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      object-fit: contain;
+      background: #fff;
+      border: 1px solid var(--line);
+    }
+    .brand span { white-space: nowrap; }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 14px;
+      font-weight: 650;
+      color: rgba(16, 32, 51, 0.78);
+    }
+    .nav-links a:hover { color: var(--blue); }
 
-    .hero { padding: 56px 0 28px; }
-    .hero-row { display: grid; grid-template-columns: 130px 1fr; gap: 20px; align-items: center; }
-    .portrait { width: 120px; height: 120px; border-radius: 14px; object-fit: cover; border: 1px solid var(--line); }
-    .hero h1 { font-size: clamp(30px, 5vw, 48px); line-height: 1.1; margin: 0 0 12px; letter-spacing: -0.02em; }
-    .hero p { margin: 0; color: var(--muted); max-width: 780px; font-size: 18px; }
-    .chips { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 10px; }
-    .chip {
-      border: 1px solid var(--line); background: var(--surface); color: #334155;
-      padding: 7px 12px; border-radius: 999px; font-size: 13px;
-    }
-    .cta { display: flex; gap: 12px; margin-top: 18px; flex-wrap: wrap; }
     .btn {
-      display: inline-flex; align-items: center; justify-content: center;
-      padding: 10px 14px; border-radius: 10px; border: 1px solid var(--line);
-      font-weight: 600; font-size: 14px; text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 11px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      font-size: 14px;
+      font-weight: 750;
+      transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
     }
-    .btn.primary { background: #2563eb; color: #fff; border-color: #2563eb; }
-    .btn.secondary { background: #fff; color: #0f172a; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn.primary {
+      background: var(--blue);
+      color: #fff;
+      border-color: var(--blue);
+    }
+    .btn.gold {
+      background: var(--gold);
+      color: #201205;
+      border-color: rgba(32, 18, 5, 0.08);
+    }
+    .btn.light { background: #fff; color: var(--ink); }
 
-    section { padding: 22px 0; }
-    .section-title {
-      font-size: 13px; text-transform: uppercase; letter-spacing: .12em;
-      color: var(--muted); margin-bottom: 14px;
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(120deg, rgba(17, 63, 103, 0.95), rgba(13, 148, 136, 0.86)),
+        url("logo.png") center right 10% / min(420px, 70vw) no-repeat;
+      color: #fff;
     }
-    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -12% -42% 44%;
+      height: 460px;
+      transform: rotate(-7deg);
+      background: rgba(242, 184, 75, 0.24);
+      border-radius: 48px;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.72fr);
+      gap: 52px;
+      align-items: end;
+      min-height: 86vh;
+      padding: 84px 0 64px;
+    }
+    .eyebrow {
+      display: inline-flex;
+      width: fit-content;
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      border-radius: 999px;
+      padding: 8px 13px;
+      background: rgba(255, 255, 255, 0.12);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 22px 0 0;
+      max-width: 850px;
+      font-size: clamp(44px, 8vw, 94px);
+      line-height: 0.93;
+      letter-spacing: 0;
+    }
+    .hero-copy {
+      max-width: 720px;
+      margin: 26px 0 0;
+      color: rgba(255, 255, 255, 0.86);
+      font-size: clamp(18px, 2vw, 23px);
+      line-height: 1.45;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+    .event-panel {
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      padding: 24px;
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow);
+    }
+    .event-panel dl {
+      display: grid;
+      gap: 18px;
+      margin: 0;
+    }
+    .event-panel dt {
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+    .event-panel dd {
+      margin: 4px 0 0;
+      font-size: 19px;
+      font-weight: 800;
+    }
+
+    section { padding: 82px 0; }
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.75fr) minmax(280px, 0.55fr);
+      gap: 34px;
+      align-items: end;
+      margin-bottom: 34px;
+    }
+    .kicker {
+      margin: 0 0 10px;
+      color: var(--teal);
+      font-size: 13px;
+      font-weight: 850;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+    h2 {
+      margin: 0;
+      font-size: clamp(30px, 4vw, 54px);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+    .lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.65;
+    }
+    .band { background: #fff; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .two-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
     .card {
-      border: 1px solid var(--line); background: var(--surface);
-      border-radius: 14px; padding: 16px;
+      min-height: 100%;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      padding: 24px;
+      box-shadow: 0 10px 28px rgba(16, 32, 51, 0.06);
     }
-    .card h3 { margin: 0 0 8px; font-size: 18px; }
-    .card p { margin: 0; color: var(--muted); font-size: 15px; }
-
-    .timeline { display: grid; gap: 10px; }
-    .item { border: 1px solid var(--line); background: var(--surface); border-radius: 12px; padding: 14px; }
-    .item strong { display: block; }
-    .item .meta { color: var(--muted); font-size: 14px; }
-
-    footer {
-      border-top: 1px solid var(--line); margin-top: 30px;
-      padding: 20px 0 34px; color: var(--muted); font-size: 14px;
+    .card strong {
+      display: block;
+      color: var(--blue);
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
-    @media (max-width: 760px) {
-      .grid { grid-template-columns: 1fr; }
-      .nav-links { display: none; }
-      .hero { padding-top: 42px; }
-      .hero-row { grid-template-columns: 1fr; }
+    .card h3 {
+      margin: 10px 0 8px;
+      font-size: 23px;
+      line-height: 1.15;
+    }
+    .card p { margin: 0; color: var(--muted); }
+    .card.accent {
+      background: var(--blue);
+      color: #fff;
+      border-color: transparent;
+    }
+    .card.accent strong,
+    .card.accent p { color: rgba(255, 255, 255, 0.82); }
+
+    .theme-strip {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--line);
+    }
+    .theme-tile {
+      background: #fff;
+      padding: 30px;
+    }
+    .theme-tile:nth-child(2) { background: #f2fbf9; }
+    .theme-tile:nth-child(3) { background: #fff5df; }
+    .theme-tile span {
+      display: inline-grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      margin-bottom: 18px;
+      border-radius: 999px;
+      background: var(--blue);
+      color: #fff;
+      font-weight: 850;
+    }
+    .theme-tile h3 { margin: 0 0 8px; font-size: 25px; }
+    .theme-tile p { margin: 0; color: var(--muted); }
+
+    .schedule {
+      display: grid;
+      gap: 12px;
+    }
+    .schedule-item {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 18px;
+      align-items: start;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      padding: 20px;
+    }
+    .date {
+      color: var(--coral);
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+    .schedule-item h3 { margin: 0 0 6px; font-size: 22px; }
+    .schedule-item p { margin: 0; color: var(--muted); }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 28px;
+    }
+    .stat {
+      border-radius: 8px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.13);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+    }
+    .stat b { display: block; font-size: 32px; line-height: 1; }
+    .stat span { display: block; margin-top: 8px; color: rgba(255, 255, 255, 0.78); font-size: 14px; }
+
+    .sponsor {
+      background: var(--ink);
+      color: #fff;
+    }
+    .sponsor .kicker { color: var(--gold); }
+    .sponsor .lead { color: rgba(255, 255, 255, 0.76); }
+    .sponsor .card {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.16);
+      box-shadow: none;
+    }
+    .sponsor .card h3 { color: #fff; }
+    .sponsor .card p,
+    .sponsor .card strong { color: rgba(255, 255, 255, 0.74); }
+
+    .footer {
+      background: #0b1726;
+      color: rgba(255, 255, 255, 0.72);
+      padding: 34px 0;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .footer strong { color: #fff; }
+
+    @media (max-width: 900px) {
+      .nav-links a:not(.btn) { display: none; }
+      .hero-inner,
+      .section-head,
+      .two-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-inner { min-height: auto; padding: 64px 0 46px; }
+      .grid,
+      .theme-strip,
+      .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 620px) {
+      .wrap { width: min(100% - 28px, var(--max)); }
+      .brand span { white-space: normal; line-height: 1.15; }
+      .nav-links .btn { padding: 9px 12px; min-height: 38px; }
+      section { padding: 56px 0; }
+      .grid,
+      .theme-strip,
+      .stats,
+      .schedule-item { grid-template-columns: 1fr; }
+      .event-panel,
+      .card,
+      .theme-tile { padding: 20px; }
     }
   </style>
 </head>
 <body>
   <nav class="nav">
     <div class="wrap nav-inner">
-      <div class="brand">Ditiro Rampate</div>
+      <a class="brand" href="#top" aria-label="Deep Learning IndabaX Botswana home">
+        <img src="/logo.png" alt="IndabaX Botswana logo" />
+        <span>IndabaX Botswana 2026</span>
+      </a>
       <div class="nav-links">
-        <a href="#projects">Projects</a>
-        <a href="#community">Community</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="#programme">Programme</a>
+        <a href="#showcase">AI Fest</a>
+        <a href="#partners">Partners</a>
+        <a class="btn primary" href="#apply">Apply</a>
       </div>
     </div>
   </nav>
 
-  <main class="wrap">
-    <section class="hero">
-      <div class="hero-row">
-        <img class="portrait" src="/assets/img/portrait.jpg" alt="Ditiro Rampate portrait" />
-        <div>
-          <h1>Offline-first Computer Vision & Edge AI for African health.</h1>
-          <p>
-            Botswana-based Python developer building practical solutions for low-resource healthcare environments.
-            Lead Organizer of Deep Learning IndabaX Botswana, speaker, and community builder across African AI ecosystems.
+  <header class="hero" id="top">
+    <div class="wrap hero-inner">
+      <div>
+        <span class="eyebrow">Deep Learning IndabaX Botswana</span>
+        <h1>Our Data. Our Intelligence. Our Future.</h1>
+        <p class="hero-copy">
+          A national gathering for Botswana's AI community, bringing students, researchers, developers, startups, public institutions, and industry together to build useful AI for African realities.
+        </p>
+        <div class="hero-actions">
+          <a class="btn gold" href="#apply">Apply to attend</a>
+          <a class="btn light" href="#partners">Partner with us</a>
+        </div>
+      </div>
+      <aside class="event-panel" aria-label="Event details">
+        <dl>
+          <div>
+            <dt>Dates</dt>
+            <dd>29-31 July 2026</dd>
+          </div>
+          <div>
+            <dt>Venue</dt>
+            <dd>Botswana Accountancy College</dd>
+          </div>
+          <div>
+            <dt>Format</dt>
+            <dd>Talks, workshops, hackathon, poster session, and AI Fest</dd>
+          </div>
+        </dl>
+        <div class="stats">
+          <div class="stat"><b>3</b><span>days</span></div>
+          <div class="stat"><b>30</b><span>hackathon spots reserved</span></div>
+          <div class="stat"><b>267</b><span>applications tracked in June</span></div>
+          <div class="stat"><b>1</b><span>community</span></div>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Why this theme</p>
+            <h2>AI that starts with African context and ends with real community value.</h2>
+          </div>
+          <p class="lead">
+            The 2026 theme focuses the event on ownership: African data, African intelligence, and African futures shaped by people building from lived reality rather than importing solutions unchanged.
           </p>
         </div>
-      </div>
-
-      <div class="chips">
-        <span class="chip">Python</span>
-        <span class="chip">Computer Vision</span>
-        <span class="chip">Edge AI</span>
-        <span class="chip">Data Science</span>
-        <span class="chip">Remote Sensing</span>
-      </div>
-
-      <div class="cta">
-        <a class="btn primary" href="mailto:ditirorampate@gmail.com">Email Me</a>
-        <a class="btn secondary" href="https://www.linkedin.com/in/ditiro-rampate-46a999a4" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a class="btn secondary" href="https://github.com/ditirodt" target="_blank" rel="noreferrer">GitHub</a>
-        <a class="btn secondary" href="https://calendar.app.google/uZ2AmsEzPewFbqJE7" target="_blank" rel="noreferrer">Book a Chat</a>
-      </div>
-    </section>
-
-    <section id="projects">
-      <div class="section-title">Featured Work</div>
-      <div class="grid">
-        <article class="card">
-          <h3>introspect (Offline-first malaria detection)</h3>
-          <p>Smartphone microscopy workflow for malaria screening in low-resource clinics, designed for limited connectivity and constrained infrastructure.</p>
-        </article>
-        <article class="card">
-          <h3>Insurance performance dashboard</h3>
-          <p>Built and maintained a Shiny for Python dashboard replacing manual Excel reporting for insurance agent persistency tracking.</p>
-        </article>
-        <article class="card">
-          <h3>PDF extraction automation</h3>
-          <p>Implemented OCR pipeline with py-tesseract to automate a time-consuming, error-prone data extraction process.</p>
-        </article>
-        <article class="card">
-          <h3>NDVI temporal analysis workshops</h3>
-          <p>Delivered geospatial Python workshops at PyCon events using geemap and satellite data time-series analysis.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="community">
-      <div class="section-title">Impact & Community</div>
-      <div class="timeline">
-        <div class="item"><strong>Lead Organizer — Deep Learning IndabaX Botswana</strong><div class="meta">Resurrected and led 2024 event programming, operations, and community engagement.</div></div>
-        <div class="item"><strong>Co-organizer — Deep Learning IndabaX South Africa</strong><div class="meta">Part of fundraising team that contributed to raising R1.2 million.</div></div>
-        <div class="item"><strong>OmdenaAI Botswana Chapter Co-Lead</strong><div class="meta">Led project proposals and beginner-friendly data science workshops.</div></div>
-      </div>
-    </section>
-
-    <section id="experience">
-      <div class="section-title">Experience</div>
-      <div class="timeline">
-        <div class="item">
-          <strong>Data Trainee — Software Applications and Information Solutions (SAiS)</strong>
-          <div class="meta">Oct 2023 – Oct 2024 · Gaborone, Botswana</div>
-        </div>
-        <div class="item">
-          <strong>Machine Learning Engineer / Chapter Co-Lead — Omdena</strong>
-          <div class="meta">Mar 2021 – Present · Remote Botswana</div>
-        </div>
-        <div class="item">
-          <strong>ICT Intern — National Assembly</strong>
-          <div class="meta">Dec 2020 – Jun 2021 · Gaborone, Botswana</div>
+        <div class="theme-strip">
+          <article class="theme-tile">
+            <span>1</span>
+            <h3>Our Data</h3>
+            <p>Meaningful AI needs data that reflects local languages, environments, institutions, and everyday experience.</p>
+          </article>
+          <article class="theme-tile">
+            <span>2</span>
+            <h3>Our Intelligence</h3>
+            <p>Solutions should be designed, tested, and improved by African researchers, developers, innovators, and communities.</p>
+          </article>
+          <article class="theme-tile">
+            <span>3</span>
+            <h3>Our Future</h3>
+            <p>The goal is measurable impact in healthcare, agriculture, education, finance, public service, and beyond.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="contact">
-      <div class="section-title">Contact</div>
-      <div class="card">
-        <h3>Let’s collaborate</h3>
-        <p>
-          Open to collaborations in health AI, computer vision, edge deployment, and African AI community initiatives.<br />
-          Email: <a href="mailto:ditirorampate@gmail.com">ditirorampate@gmail.com</a>
-        </p>
+    <section class="band" id="programme">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Programme</p>
+            <h2>Three days of learning, building, and showcasing Botswana AI.</h2>
+          </div>
+          <p class="lead">
+            The programme is being shaped around keynote sessions, practical learning, open speaker submissions, a two-phase hackathon, and a celebratory AI Fest.
+          </p>
+        </div>
+        <div class="schedule">
+          <article class="schedule-item">
+            <div class="date">Day 1</div>
+            <div>
+              <h3>Community welcome and technical programme</h3>
+              <p>Opening sessions, invited speakers, panels, and practical tracks for participants across academic, industry, startup, and public-sector backgrounds.</p>
+            </div>
+          </article>
+          <article class="schedule-item">
+            <div class="date">Day 2</div>
+            <div>
+              <h3>Workshops, hackathon, and applied sessions</h3>
+              <p>Hands-on learning, hackathon work, mentorship, dataset exploration, and sessions designed to help participants leave with practical skills.</p>
+            </div>
+          </article>
+          <article class="schedule-item">
+            <div class="date">Day 3</div>
+            <div>
+              <h3>AI Fest, posters, demos, and closing</h3>
+              <p>A showcase of student work, research posters, startups, companies, creative AI projects, and community achievements from across Botswana.</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <footer>© <span id="year"></span> Ditiro Rampate</footer>
+    <section id="tracks">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Tracks</p>
+            <h2>Built for people who want to learn, contribute, and ship useful work.</h2>
+          </div>
+          <p class="lead">
+            Whether you are new to machine learning or already building products, the event creates entry points for learning, collaboration, and public recognition.
+          </p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <strong>Talks</strong>
+            <h3>Keynotes and speaker sessions</h3>
+            <p>Sessions from researchers, builders, startups, industry teams, and public-sector voices working on relevant AI problems.</p>
+          </article>
+          <article class="card">
+            <strong>Hackathon</strong>
+            <h3>Data challenges with mentors</h3>
+            <p>A practical challenge pathway with online preparation, in-person building, tutors, judging, and prizes.</p>
+          </article>
+          <article class="card">
+            <strong>Posters</strong>
+            <h3>Research and project showcase</h3>
+            <p>Participants are encouraged to bring posters for new ideas, finished projects, early research, or community work.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="showcase">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="kicker">AI Fest</p>
+            <h2>An evening for Botswana's AI builders, artists, startups, and research teams.</h2>
+          </div>
+          <p class="lead">
+            AI Fest is designed as a public-facing celebration of local progress, with posters, demos, startup pitches, creative work, and space for companies and research groups to meet talent.
+          </p>
+        </div>
+        <div class="two-grid">
+          <article class="card accent">
+            <strong>Who should showcase</strong>
+            <h3>Students, startups, labs, companies, and independent builders.</h3>
+            <p>Research groups, student teams, AI artists, technology companies, and out-of-school innovators are welcome to share what they are building.</p>
+          </article>
+          <article class="card">
+            <strong>What to expect</strong>
+            <h3>Posters, tables, demos, judging, music, and community energy.</h3>
+            <p>The organising team is planning poster boards, presentation tables, startup engagement, judging, and a festive environment for discovery.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="apply">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Applications</p>
+            <h2>Applications, speaker submissions, posters, and hackathon calls are part of the 2026 flow.</h2>
+          </div>
+          <p class="lead">
+            The organising team is coordinating attendee selection, open speaker submissions, hackathon applications, poster submissions, and post-event feedback.
+          </p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <strong>Attend</strong>
+            <h3>Join the national AI gathering</h3>
+            <p>Students, researchers, developers, professionals, founders, and AI-curious community members can apply to participate.</p>
+          </article>
+          <article class="card">
+            <strong>Speak</strong>
+            <h3>Share practical or research insight</h3>
+            <p>The programme team is looking for diverse voices across academia, industry, startups, public institutions, and community projects.</p>
+          </article>
+          <article class="card">
+            <strong>Build</strong>
+            <h3>Enter the hackathon or poster session</h3>
+            <p>Bring a project, compete with a team, present research, or use the event to find collaborators for the next version.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sponsor" id="partners">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Partners and sponsors</p>
+            <h2>Support the infrastructure behind Botswana's AI community.</h2>
+          </div>
+          <p class="lead">
+            Sponsors help cover venue operations, food, participant support, hackathon prizes, branded materials, speaker logistics, and the practical details that make the event accessible.
+          </p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <strong>Talent</strong>
+            <h3>Meet emerging AI builders</h3>
+            <p>Connect with students, early-career developers, researchers, and founders actively working on data and AI.</p>
+          </article>
+          <article class="card">
+            <strong>Impact</strong>
+            <h3>Back locally relevant AI</h3>
+            <p>Help move the community from conversation to action in healthcare, agriculture, education, finance, and public service.</p>
+          </article>
+          <article class="card">
+            <strong>Visibility</strong>
+            <h3>Show up as a serious ecosystem partner</h3>
+            <p>Participate through AI Fest, challenge support, talks, mentorship, exhibition space, or direct sponsorship.</p>
+          </article>
+        </div>
+        <div class="hero-actions">
+          <a class="btn gold" href="mailto:ditirorampate@gmail.com?subject=IndabaX%20Botswana%202026%20partnership">Become a partner</a>
+          <a class="btn light" href="mailto:ditirorampate@gmail.com?subject=IndabaX%20Botswana%202026%20questions">Contact the team</a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <strong>Deep Learning IndabaX Botswana 2026</strong><br />
+        Our Data. Our Intelligence. Our Future.
+      </div>
+      <div>29-31 July 2026 | Botswana Accountancy College</div>
+    </div>
+  </footer>
 </body>
 </html>
