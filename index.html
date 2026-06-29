@@ -9,7 +9,7 @@
     content="Deep Learning IndabaX Botswana 2026 brings Botswana's AI community together from 29-31 July 2026 at Botswana Accountancy College under the theme Our Data. Our Intelligence. Our Future."
   />
   <meta name="keywords" content="IndabaX Botswana, Deep Learning Indaba, AI Botswana, machine learning, hackathon, AI Fest, poster session, Botswana Accountancy College" />
-  <meta name="theme-color" content="#113f67" />
+  <meta name="theme-color" content="#173f7a" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Deep Learning IndabaX Botswana 2026" />
   <meta property="og:description" content="Our Data. Our Intelligence. Our Future. 29-31 July 2026 at Botswana Accountancy College." />
@@ -42,14 +42,17 @@
   </script>
   <style>
     :root {
-      --ink: #102033;
-      --muted: #526173;
-      --paper: #fffaf1;
+      --ink: #172033;
+      --muted: #596579;
+      --paper: #f8f6ef;
       --surface: #ffffff;
-      --blue: #113f67;
-      --teal: #0d9488;
-      --gold: #f2b84b;
-      --coral: #e76f51;
+      --blue: #173f7a;
+      --blue-2: #0f2b55;
+      --gold: #d6a83d;
+      --gold-2: #f4d27a;
+      --silver: #c9d1db;
+      --bronze: #b7773c;
+      --bronze-2: #e2aa6b;
       --line: rgba(16, 32, 51, 0.14);
       --shadow: 0 18px 50px rgba(16, 32, 51, 0.12);
       --max: 1160px;
@@ -73,7 +76,7 @@
       top: 0;
       z-index: 20;
       border-bottom: 1px solid var(--line);
-      background: rgba(255, 250, 241, 0.92);
+      background: rgba(248, 246, 239, 0.94);
       backdrop-filter: blur(14px);
     }
     .nav-inner {
@@ -139,7 +142,7 @@
       position: relative;
       overflow: hidden;
       background:
-        linear-gradient(120deg, rgba(17, 63, 103, 0.95), rgba(13, 148, 136, 0.86)),
+        linear-gradient(120deg, rgba(15, 43, 85, 0.96), rgba(23, 63, 122, 0.88)),
         url("logo.png") center right 10% / min(420px, 70vw) no-repeat;
       color: #fff;
     }
@@ -149,7 +152,7 @@
       inset: auto -12% -42% 44%;
       height: 460px;
       transform: rotate(-7deg);
-      background: rgba(242, 184, 75, 0.24);
+      background: rgba(214, 168, 61, 0.25);
       border-radius: 48px;
     }
     .hero-inner {
@@ -225,7 +228,7 @@
     }
     .kicker {
       margin: 0 0 10px;
-      color: var(--teal);
+      color: var(--blue);
       font-size: 13px;
       font-weight: 850;
       letter-spacing: 0.13em;
@@ -288,8 +291,8 @@
       background: #fff;
       padding: 30px;
     }
-    .theme-tile:nth-child(2) { background: #f2fbf9; }
-    .theme-tile:nth-child(3) { background: #fff5df; }
+    .theme-tile:nth-child(2) { background: #eef2f6; }
+    .theme-tile:nth-child(3) { background: #fff4d7; }
     .theme-tile span {
       display: inline-grid;
       place-items: center;
@@ -319,7 +322,7 @@
       padding: 20px;
     }
     .date {
-      color: var(--coral);
+      color: var(--bronze);
       font-weight: 900;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -342,6 +345,34 @@
     }
     .stat b { display: block; font-size: 32px; line-height: 1; }
     .stat span { display: block; margin-top: 8px; color: rgba(255, 255, 255, 0.78); font-size: 14px; }
+
+    .tier-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin: 26px 0 18px;
+    }
+    .tier {
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 8px;
+      padding: 18px;
+      background: rgba(255, 255, 255, 0.08);
+    }
+    .tier b {
+      display: block;
+      font-size: 24px;
+      line-height: 1;
+    }
+    .tier span {
+      display: block;
+      margin-top: 10px;
+      color: rgba(255, 255, 255, 0.74);
+      font-size: 14px;
+    }
+    .tier.gold { border-color: rgba(214, 168, 61, 0.7); box-shadow: inset 0 3px 0 var(--gold); }
+    .tier.silver { border-color: rgba(201, 209, 219, 0.75); box-shadow: inset 0 3px 0 var(--silver); }
+    .tier.bronze { border-color: rgba(183, 119, 60, 0.78); box-shadow: inset 0 3px 0 var(--bronze); }
+    .tier.blue { border-color: rgba(244, 210, 122, 0.5); box-shadow: inset 0 3px 0 var(--gold-2); }
 
     .sponsor {
       background: var(--ink);
@@ -382,7 +413,8 @@
       .hero-inner { min-height: auto; padding: 64px 0 46px; }
       .grid,
       .theme-strip,
-      .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .stats,
+      .tier-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
     @media (max-width: 620px) {
@@ -393,6 +425,7 @@
       .grid,
       .theme-strip,
       .stats,
+      .tier-grid,
       .schedule-item { grid-template-columns: 1fr; }
       .event-panel,
       .card,
@@ -447,8 +480,8 @@
         </dl>
         <div class="stats">
           <div class="stat"><b>3</b><span>days</span></div>
+          <div class="stat"><b>300+</b><span>delegates expected</span></div>
           <div class="stat"><b>30</b><span>hackathon spots reserved</span></div>
-          <div class="stat"><b>267</b><span>applications tracked in June</span></div>
           <div class="stat"><b>1</b><span>community</span></div>
         </div>
       </aside>
@@ -538,8 +571,8 @@
         <div class="grid">
           <article class="card">
             <strong>Talks</strong>
-            <h3>Keynotes and speaker sessions</h3>
-            <p>Sessions from researchers, builders, startups, industry teams, and public-sector voices working on relevant AI problems.</p>
+            <h3>Keynotes, lectures, and tutorials</h3>
+            <p>Sessions across computer vision, data science, multimodal AI, predictive modelling, AI safety, reinforcement learning, NLP, and more.</p>
           </article>
           <article class="card">
             <strong>Hackathon</strong>
@@ -549,7 +582,7 @@
           <article class="card">
             <strong>Posters</strong>
             <h3>Research and project showcase</h3>
-            <p>Participants are encouraged to bring posters for new ideas, finished projects, early research, or community work.</p>
+            <p>Participants are encouraged to bring posters for new ideas, finished projects, early research, community work, and industry applications.</p>
           </article>
         </div>
       </div>
@@ -596,7 +629,7 @@
           <article class="card">
             <strong>Attend</strong>
             <h3>Join the national AI gathering</h3>
-            <p>Students, researchers, developers, professionals, founders, and AI-curious community members can apply to participate.</p>
+            <p>Students attend for free, with researchers, developers, professionals, founders, and AI-curious community members also invited to participate.</p>
           </article>
           <article class="card">
             <strong>Speak</strong>
@@ -623,6 +656,24 @@
             Sponsors help cover venue operations, food, participant support, hackathon prizes, branded materials, speaker logistics, and the practical details that make the event accessible.
           </p>
         </div>
+        <div class="tier-grid" aria-label="Sponsorship tiers">
+          <div class="tier gold">
+            <b>Gold</b>
+            <span>P100 000</span>
+          </div>
+          <div class="tier silver">
+            <b>Silver</b>
+            <span>P50 000</span>
+          </div>
+          <div class="tier bronze">
+            <b>Bronze</b>
+            <span>P25 000</span>
+          </div>
+          <div class="tier blue">
+            <b>Blue</b>
+            <span>P15 000</span>
+          </div>
+        </div>
         <div class="grid">
           <article class="card">
             <strong>Talent</strong>
@@ -637,12 +688,12 @@
           <article class="card">
             <strong>Visibility</strong>
             <h3>Show up as a serious ecosystem partner</h3>
-            <p>Participate through AI Fest, challenge support, talks, mentorship, exhibition space, or direct sponsorship.</p>
+            <p>Participate through AI Fest, challenge support, workshops, mentorship, booth exhibition, track sponsorship, or direct sponsorship.</p>
           </article>
         </div>
         <div class="hero-actions">
-          <a class="btn gold" href="mailto:ditirorampate@gmail.com?subject=IndabaX%20Botswana%202026%20partnership">Become a partner</a>
-          <a class="btn light" href="mailto:ditirorampate@gmail.com?subject=IndabaX%20Botswana%202026%20questions">Contact the team</a>
+          <a class="btn gold" href="mailto:fundraising-indabaxbw@googlegroups.com?subject=IndabaX%20Botswana%202026%20partnership">Become a partner</a>
+          <a class="btn light" href="mailto:fundraising-indabaxbw@googlegroups.com?subject=IndabaX%20Botswana%202026%20questions">Contact the team</a>
         </div>
       </div>
     </section>
